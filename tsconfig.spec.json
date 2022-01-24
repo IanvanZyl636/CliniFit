@@ -3,8 +3,14 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
+    "paths": {
+      "exceljs": [
+        "node_modules/exceljs/dist/exceljs.min"
+      ]
+    },
     "types": [
-      "jasmine"
+      "jasmine",
+      "node"
     ]
   },
   "files": [
