@@ -18,17 +18,18 @@ describe('ExcelService', () => {
     expect(excelService).toBeTruthy();
   });
 
-  it('should read out of xlsx file', (done) => {
-    excelService.openExcelWorkbook('assets/documents/Test.xlsx').then((wb) => {
-      expect(wb).toBeDefined();
-      done();
-    });
+  it('should read out of xlsx file', async () => {
+    const wb = await excelService.openExcelWorkbook(
+      'assets/documents/Test.xlsx'
+    );
+    expect(wb).toBeDefined();
   });
 
-  it('should error missing xlsx file', (done) => {
-    excelService.openExcelWorkbook('error path').catch((error) => {
+  it('should error missing xlsx file', async () => {
+    try {
+      await excelService.openExcelWorkbook('error path');
+    } catch (error) {
       expect(error).toBeTruthy();
-      done();
-    });
+    }
   });
 });
