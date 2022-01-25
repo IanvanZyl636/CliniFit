@@ -20,16 +20,8 @@ describe('ExcelService', () => {
 
   it('should read out of xlsx file', async () => {
     const wb = await excelService.openExcelWorkbook(
-      'assets/documents/Test.xlsx'
+      'assets/documents/cfg_parsed_trials.xlsx'
     );
     expect(wb).toBeDefined();
-  });
-
-  it('should error missing xlsx file', async () => {
-    try {
-      await excelService.openExcelWorkbook('error path');
-    } catch (error) {
-      expect(error).toBeTruthy();
-    }
   });
 });

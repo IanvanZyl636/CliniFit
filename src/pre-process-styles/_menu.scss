@@ -1,0 +1,38 @@
+@import '_variables';
+
+.menu-container {
+  height: 71px;
+  border-bottom: 1px $main-theme-grey solid;
+}
+
+* {
+  height: 100%;
+}
+
+.link-text {
+  color: $main-theme-text;
+  font-size: 21px;
+  line-height: 21px;
+  height: 21px;
+  font-weight: 400;
+}
+
+.link-button {
+  cursor: pointer;
+}
+
+.link-button:hover {
+  background-color: $theme-egg-shell;
+}
+
+.menu-logo-container {
+  padding: 19.25px 0;
+}
+
+.menu-logo-seperator {
+  border-right: 1px $main-theme-grey solid;
+}
+
+.menu-item-seperator {
+  border-right: 1px $main-theme-grey solid;
+}

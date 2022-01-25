@@ -8,7 +8,7 @@ export class ExcelService {
   constructor(private http: HttpClient) {}
 
   openExcelWorkbook = async (url: string) => {
-    return new Promise(async (resolve, reject) => {
+    return new Promise<Workbook>(async (resolve, reject) => {
       try {
         const wbo = new Workbook();
 

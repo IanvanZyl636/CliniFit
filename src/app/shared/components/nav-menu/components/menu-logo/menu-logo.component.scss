@@ -1,0 +1,16 @@
+@import '_variables';
+
+:host {
+  height: 100%;
+}
+
+.menu-logo {
+  height: 100%;
+  font-size: 32.5px;
+  line-height: 32.5px;
+  color: $main-theme-accent1
+}
+
+.menu-logo-txt {
+  color: $main-theme-text;
+}
