@@ -18,7 +18,6 @@ import { NavMenuModule } from './shared/components/nav-menu/nav-menu.module';
     NavMenuModule,
     FontAwesomeModule,
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
