@@ -1,0 +1,30 @@
+[
+  {
+    "nctId": "NCT00352014",
+    "title": "Cancer trail",
+    "criterion": [
+      {
+        "eligibilityType": "exclusion",
+        "variableType": "numerical",
+        "criteria": "Renal failure (creatinine > 150 mmol/l)",
+        "relation": {
+          "id": "415",
+          "name": "creatinine_level",
+          "unit": "mmol/l",
+          "upper": { "incl": true, "value": "150" },
+          "variableType": "numerical",
+          "score": 1
+        }
+      }
+    ]
+  },
+  {
+    "nctId": "NCT00100191",
+    "title": "Other Cancer trail",
+    "criterion": [
+      {
+        "eligibilityType": "inclusion"
+      }
+    ]
+  }
+]
