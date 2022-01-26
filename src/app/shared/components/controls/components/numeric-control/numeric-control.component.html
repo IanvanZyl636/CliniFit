@@ -1,1 +1,9 @@
-<p>numeric-control works!</p>
+<div class="form-group">
+  <label>{{label}}</label>
+  <input type="number" class="form-control" [(ngModel)]="value" [disabled]="disabled" [placeholder]="placeholder">
+  <div *ngIf="control && control.invalid && (control.dirty || control.touched)">
+    <span *ngIf="control.errors?.['required'] as required" class="badge badge-danger">Required</span>
+    <span *ngIf="control.errors?.['min'] as min" class="badge badge-danger">Minimum value is {{min.min}}</span>
+    <span *ngIf="control.errors?.['max'] as max" class="badge badge-danger">Maximum value is {{max.max}}</span>
+  </div>
+</div>

@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { HomeModule } from './pages/home/home.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavMenuModule } from './shared/components/nav-menu/nav-menu.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
@@ -17,6 +18,7 @@ import { NavMenuModule } from './shared/components/nav-menu/nav-menu.module';
     HomeModule,
     NavMenuModule,
     FontAwesomeModule,
+    NgbModule,
   ],
   bootstrap: [AppComponent],
 })

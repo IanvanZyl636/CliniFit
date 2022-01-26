@@ -1,1 +1,12 @@
+<form [formGroup]="form" (submit)="submit()">
+  <app-numeric-control [label]="'What is your age?'" formControlName="age"></app-numeric-control>
+  <app-numeric-control [label]="'What is your age?'" formControlName="age"></app-numeric-control>
+  <app-radio-control [label]="'Have you had cancer?'" [options]="hadCancerOptions" formControlName="hadCancer">
+  </app-radio-control>
+  <app-radio-control [label]="'Have you had cancer?'" [options]="hadCancerOptions" formControlName="hadCancer">
+  </app-radio-control>
+  <app-radio-control [label]="'Have you had cancer?'" [options]="hadCancerOptions" formControlName="isHypertense">
+  </app-radio-control>
 
+  <button type="submit">Submit</button>
+</form>

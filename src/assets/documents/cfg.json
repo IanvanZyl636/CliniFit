@@ -1,0 +1,50 @@
+{
+  "trails": [
+    {
+      "#nct_id": "NCT00706095",
+      "title": "Cancer Trail",
+      "criteria": [
+        {
+          "criterion": "Age ≥ 18 years",
+          "eligibility_type": "inclusion",
+          "variable_type": "numerical",
+          "question": "How old are you?",
+          "relation": {
+            "id": "200",
+            "name": "age",
+            "unit": "year",
+            "lower": { "incl": true, "value": "18" },
+            "variableType": "numerical",
+            "score": 1
+          }
+        },
+        {
+          "criterion": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0, 1, or 2",
+          "eligibility_type": "inclusion",
+          "variable_type": "ordinal",
+          "question": "What is your ECOG performance status?",
+          "relation": {
+            "id": "100",
+            "name": "ecog",
+            "value": ["0", "1", "2"],
+            "variableType": "ordinal",
+            "score": 1
+          }
+        },
+        {
+          "criterion": "Significant cardiovascular impairment (history of congestive heart failure > New York Heart Association [NYHA] Grade II, unstable angina or myocardial infarction within the past six months, or serious cardiac arrhythmia)",
+          "eligibility_type": "exclusion",
+          "variable_type": "ordinal",
+          "question": "What is your NYHA class?",
+          "relation": {
+            "id": "102",
+            "name": "nyha",
+            "value": ["1", "3", "4"],
+            "variableType": "ordinal",
+            "score": 0.6875
+          }
+        }
+      ]
+    }
+  ]
+}

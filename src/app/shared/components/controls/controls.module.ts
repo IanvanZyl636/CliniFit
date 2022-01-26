@@ -5,6 +5,7 @@ import { CheckBoxControlComponent } from './components/check-box-control/check-b
 import { NumericControlComponent } from './components/numeric-control/numeric-control.component';
 import { SmallOptionsCheckBoxControlComponent } from './components/check-box-control/components/small-options-check-box-control/small-options-check-box-control.component';
 import { LargeOptionsCheckBoxControlComponent } from './components/check-box-control/components/large-options-check-box-control/large-options-check-box-control.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,11 @@ import { LargeOptionsCheckBoxControlComponent } from './components/check-box-con
     SmallOptionsCheckBoxControlComponent,
     LargeOptionsCheckBoxControlComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
+  exports: [
+    RadioControlComponent,
+    CheckBoxControlComponent,
+    NumericControlComponent,
+  ],
 })
 export class ControlsModule {}

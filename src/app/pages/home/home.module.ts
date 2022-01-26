@@ -10,6 +10,7 @@ import {
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { ControlsModule } from 'src/app/shared/components/controls/controls.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -22,6 +23,7 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
+    ControlsModule,
   ],
   providers: [
     {

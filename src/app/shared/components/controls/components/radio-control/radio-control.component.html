@@ -1,1 +1,16 @@
-<p>radio-control works!</p>
+<div class="form-group">
+  <label>{{label}}</label>
+  <div *ngFor="let option of options" class="form-check">
+    <input class="form-check-input" type="radio" [name]="ngControl.controlName" [value]="option.value"
+      [(ngModel)]="value">
+    <label class="form-check-label">
+      {{option.description}}
+    </label>
+  </div>
+  <div *ngIf="options === undefined || options.length === 0">
+    No options
+  </div>
+  <div *ngIf="ngControl.control && ngControl.control.invalid && (ngControl.control.dirty || ngControl.control.touched)">
+    <span *ngIf="ngControl.control.errors?.['required'] as required" class="badge badge-danger">Required</span>
+  </div>
+</div>

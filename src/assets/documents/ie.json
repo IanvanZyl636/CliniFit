@@ -1,30 +1,24 @@
-[
-  {
-    "nctId": "NCT00352014",
-    "title": "Cancer trail",
-    "criterion": [
-      {
-        "eligibilityType": "exclusion",
-        "variableType": "numerical",
-        "criteria": "Renal failure (creatinine > 150 mmol/l)",
-        "relation": {
-          "id": "415",
-          "name": "creatinine_level",
-          "unit": "mmol/l",
-          "upper": { "incl": true, "value": "150" },
-          "variableType": "numerical",
-          "score": 1
+{
+  "trails": [
+    {
+      "#nct_id": "NCT00100191",
+      "title": "This is a Trail",
+      "criteria": [
+        {
+          "criterion": "Uterine fibroids",
+          "label": "word_scores:chronic_disease",
+          "eligibility_type": "inclusion",
+          "term": "uterine fibroids",
+          "concepts": "Fibroid Uterus"
+        },
+        {
+          "criterion": "Pregnancy",
+          "label": "word_scores:pregnancy",
+          "eligibility_type": "exclusion",
+          "term": "pregnancy",
+          "concepts": "Pregnancy"
         }
-      }
-    ]
-  },
-  {
-    "nctId": "NCT00100191",
-    "title": "Other Cancer trail",
-    "criterion": [
-      {
-        "eligibilityType": "inclusion"
-      }
-    ]
-  }
-]
+      ]
+    }
+  ]
+}
