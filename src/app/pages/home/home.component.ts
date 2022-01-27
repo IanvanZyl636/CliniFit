@@ -18,12 +18,12 @@ export class HomeComponent {
 
   hadCancerOptions: IOptionModel[] = [
     {
-      value: 'yes',
-      description: 'Yes',
+      value: 'Liver Diseases',
+      description: 'Liver Diseases',
     } as IOptionModel,
     {
-      value: 'no',
-      description: 'No',
+      value: 'Kidney Failure',
+      description: 'Kidney Failure',
     } as IOptionModel,
   ];
 

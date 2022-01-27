@@ -13,7 +13,6 @@ import {
 } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 import { IOptionModel } from 'src/app/shared/models/controls/option.model';
-import { NumericControlComponent } from '../numeric-control/numeric-control.component';
 
 @Component({
   selector: 'app-radio-control',

@@ -1,1 +1,32 @@
-<p>check-box-control works!</p>
+<div class="form-group">
+  <label>{{label}}</label>
+  <input #searchInput type="text" class="form-control" [(ngModel)]="search" placeholder="Search..."
+    (blur)="!preventBlurClose?showDropdown = false:null;" (focus)="onFocus()">
+  <div class="check-controls-quick-remove-container">
+    <div class="row no-gutters">
+      <div class="col-auto check-controls-quick-remove"
+        *ngFor="let selectedControl of checkBoxFormArray.getCheckedCheckBoxControls"
+        (click)="onQuickRemoveControl(selectedControl)">
+        {{selectedControl.checkBoxModel.description}}
+        <fa-icon class="ml-1" [icon]="faTimes"></fa-icon>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="checkBoxFormArray && checkBoxFormArray.invalid && (checkBoxFormArray.dirty || checkBoxFormArray.touched)">
+    <span *ngIf="checkBoxFormArray.errors?.['required'] as required" class="badge badge-danger">Required</span>
+  </div>
+</div>
+<div class="check-box-custom-dropdown"
+  [ngStyle]="{'top':dropDownTop + 'px','left':dropDownLeft + 'px','width':dropDownWidth + 'px', 'max-height':dropDownMaxHeight + 'px'}"
+  [ngClass]="{'check-box-flip-dropdown':flipDropDown}" (mouseenter)="preventBlurClose = true;"
+  (mouseleave)="preventBlurClose = false;" *ngIf="showDropdown">
+  <div class="form-check cursor-pointer"
+    *ngFor="let checkBoxControl of checkBoxFormArray.checkBoxControls | filterObj:['checkBoxModel','description']:search"
+    (click)="checkBoxControl.setValue(!checkBoxControl.value)">
+    <input class="form-check-input" type="checkbox" [formControl]="checkBoxControl"
+      [value]="checkBoxControl.checkBoxModel.value">
+    <label class="form-check-label" for="flexCheckDefault">
+      {{checkBoxControl.checkBoxModel.description}}
+    </label>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+@import "~bootstrap/scss/_functions";
+@import "../../../../../../../../assets/sass/_theme";
+
+.default-hover-action:hover{
+    background-color: $main-theme-color;
+    color:white;
+}

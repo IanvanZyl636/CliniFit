@@ -3,19 +3,23 @@ import { CommonModule } from '@angular/common';
 import { RadioControlComponent } from './components/radio-control/radio-control.component';
 import { CheckBoxControlComponent } from './components/check-box-control/check-box-control.component';
 import { NumericControlComponent } from './components/numeric-control/numeric-control.component';
-import { SmallOptionsCheckBoxControlComponent } from './components/check-box-control/components/small-options-check-box-control/small-options-check-box-control.component';
-import { LargeOptionsCheckBoxControlComponent } from './components/check-box-control/components/large-options-check-box-control/large-options-check-box-control.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterModule } from '../../pipes/filter/filter.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     RadioControlComponent,
     CheckBoxControlComponent,
     NumericControlComponent,
-    SmallOptionsCheckBoxControlComponent,
-    LargeOptionsCheckBoxControlComponent,
   ],
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    FilterModule,
+    FontAwesomeModule,
+  ],
   exports: [
     RadioControlComponent,
     CheckBoxControlComponent,

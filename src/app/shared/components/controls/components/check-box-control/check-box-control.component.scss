@@ -1,0 +1,27 @@
+@import '_variables';
+
+.check-box-custom-dropdown {
+  position: fixed;
+  min-height: 20px;
+  background: white;
+  padding: 5px;
+  box-shadow: 0px 3px 15px -6px rgba(0, 0, 0, 0.55);
+  z-index: 1000;
+  overflow: auto;
+}
+
+.check-box-flip-dropdown {
+  transform: translateY(-100%);
+}
+
+.check-controls-quick-remove-container {
+  margin: 5px 0;
+}
+
+.check-controls-quick-remove {
+  border: 1px $main-theme-grey solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}

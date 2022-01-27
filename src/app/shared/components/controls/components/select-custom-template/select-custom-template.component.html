@@ -1,0 +1,21 @@
+<div class="position-relative">  
+  <ng-content select="[selected]"></ng-content>  
+  <select #selectInput 
+    class="form-control" 
+    [disabled]="disabled" 
+    (blur)="!preventBlurClose?showDropdown = false:null;" 
+    (click)="onClick();" 
+    (mousedown)="stopDefaultDropdown($event);">
+    <option selected *ngIf="value">
+      <ng-container [ngTemplateOutlet]="selectedTemplate" [ngTemplateOutletContext]="{$implicit:value}"></ng-container>
+    </option>
+  </select>
+  <div  class="select-custom-dropdown" 
+        [ngStyle]="{'top':dropDownTop + 'px','left':dropDownLeft + 'px','width':dropDownWidth + 'px', 'max-height':dropDownMaxHeight + 'px'}" 
+        [ngClass]="{'select-flip-dropdown':flipDropDown}"
+        (mouseenter)="preventBlurClose = true;" 
+        (mouseleave)="preventBlurClose = false;" 
+        *ngIf="showDropdown">    
+    <ng-content></ng-content>
+  </div>
+</div>

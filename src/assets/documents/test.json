@@ -1,0 +1,149 @@
+{
+  "#nct_id": "NCT00706095",
+  "title": "Study Of Eribulin (E7389) In Patients With Advanced Solid Tumors And Normal Or Reduced Hepatic Function As Per Child-Pugh System",
+  "criteria": [
+    {
+      "criterion": "Significant cardiovascular impairment (history of congestive heart failure > New York Heart Association [NYHA] Grade II, unstable angina or myocardial infarction within the past six months, or serious cardiac arrhythmia)",
+      "eligibility_type": "exclusion",
+      "variable_type": "ordinal",
+      "question": "What is your NYHA class?",
+      "relation": {
+        "id": "102",
+        "name": "nyha",
+        "value": ["1", "3", "4"],
+        "variableType": "ordinal",
+        "score": 0.6875
+      }
+    },
+    {
+      "criterion": "All the general inclusion criteria listed above plus: Normal hepatic function as evidenced by bilirubin \u2264 34 \u03bcmol/l (\u22642.0 mg/dL) and alkaline phosphatase, alanine transaminase (ALT), and aspartate transaminase (AST) \u22643 times the upper limits of normal (ULN) (in the case of liver metastases \u22645 x ULN), or in the case of bone metastases, the liver specific alkaline phosphatase \u22643 times the upper limits of normal (ULN), and in the case of concomitant liver metastases, \u22645 x ULN",
+      "eligibility_type": "inclusion",
+      "variable_type": "numerical",
+      "question": "What is your total bilirubin level?",
+      "relation": {
+        "id": "407",
+        "name": "total_bilirubin_level",
+        "upper": {
+          "incl": true,
+          "value": "34"
+        },
+        "variableType": "numerical",
+        "score": 0.75
+      }
+    },
+    {
+      "criterion": "Adequate bone marrow function as evidenced by absolute neutrophil count (ANC) \u2265 1.5 x 10^9/L, hemoglobin \u2265 10.0 g/dL (a hemoglobin <10.0 g/dL is acceptable if it is corrected by growth factor or transfusion), and platelet count \u2265 100 x 10^9/L",
+      "eligibility_type": "inclusion",
+      "variable_type": "numerical",
+      "question": "What is your absolute neutrophil count?",
+      "relation": {
+        "id": "408",
+        "name": "anc",
+        "unit": "cells/l",
+        "lower": {
+          "incl": true,
+          "value": "1.5e9"
+        },
+        "variableType": "numerical",
+        "score": 1
+      }
+    },
+    {
+      "criterion": "Adequate bone marrow function as evidenced by absolute neutrophil count (ANC) \u2265 1.5 x 10^9/L, hemoglobin \u2265 10.0 g/dL (a hemoglobin <10.0 g/dL is acceptable if it is corrected by growth factor or transfusion), and platelet count \u2265 100 x 10^9/L",
+      "eligibility_type": "inclusion",
+      "variable_type": "numerical",
+      "question": "What is your platelet count?",
+      "relation": {
+        "id": "405",
+        "name": "platelet_count",
+        "unit": "cells/l",
+        "lower": {
+          "incl": true,
+          "value": "100e9"
+        },
+        "variableType": "numerical",
+        "score": 1
+      }
+    },
+    {
+      "criterion": "Adequate renal function as evidenced by serum creatinine \u2264 2.0 mg/dL or calculated creatinine clearance \u2265 40 mL/minute (min) per the Cockcroft and Gault formula",
+      "eligibility_type": "inclusion",
+      "variable_type": "numerical",
+      "question": "What is your calculated creatinine clearance?",
+      "relation": {
+        "id": "416",
+        "name": "calculated_creatinine_clearance",
+        "lower": {
+          "incl": true,
+          "value": "40"
+        },
+        "variableType": "numerical",
+        "score": 1
+      }
+    },
+    {
+      "criterion": "Adequate renal function as evidenced by serum creatinine \u2264 2.0 mg/dL or calculated creatinine clearance \u2265 40 mL/minute (min) per the Cockcroft and Gault formula",
+      "eligibility_type": "inclusion",
+      "variable_type": "numerical",
+      "question": "What is your creatinine level?",
+      "relation": {
+        "id": "415",
+        "name": "creatinine_level",
+        "unit": "mg/dl",
+        "upper": {
+          "incl": true,
+          "value": "2.0"
+        },
+        "variableType": "numerical",
+        "score": 1
+      }
+    },
+    {
+      "criterion": "Life expectancy of \u2265 3 months",
+      "eligibility_type": "inclusion",
+      "variable_type": "numerical",
+      "question": "What is your life expectancy?",
+      "relation": {
+        "id": "206",
+        "name": "life_expectancy",
+        "unit": "month",
+        "lower": {
+          "incl": true,
+          "value": "3"
+        },
+        "variableType": "numerical",
+        "score": 1
+      }
+    },
+    {
+      "criterion": "Age \u2265 18 years",
+      "eligibility_type": "inclusion",
+      "variable_type": "numerical",
+      "question": "How old are you?",
+      "relation": {
+        "id": "200",
+        "name": "age",
+        "unit": "year",
+        "lower": {
+          "incl": true,
+          "value": "18"
+        },
+        "variableType": "numerical",
+        "score": 1
+      }
+    },
+    {
+      "criterion": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0, 1, or 2",
+      "eligibility_type": "inclusion",
+      "variable_type": "ordinal",
+      "question": "What is your ECOG performance status?",
+      "relation": {
+        "id": "100",
+        "name": "ecog",
+        "value": ["0", "1", "2"],
+        "variableType": "ordinal",
+        "score": 1
+      }
+    }
+  ]
+}
