@@ -1,10 +1,17 @@
 <div class="form-group">
   <label>{{label}}</label>
-  <input #searchInput type="text" class="form-control" [(ngModel)]="search" placeholder="Search..."
-    (blur)="!preventBlurClose?showDropdown = false:null;" (focus)="onFocus()">
+  <div class="position-relative">
+    <input #searchInput type="text" class="form-control" [(ngModel)]="search" placeholder="Search..."
+      (blur)="!preventBlurClose?showDropdown = false:null;" (focus)="onFocus()">
+    <div *ngIf="search && search.length > 0" class="clear-search-filter cursor-pointer"
+      (mouseenter)="preventBlurClose = true;" (mouseleave)="preventBlurClose = false;searchInput.focus();"
+      (click)="search = null;">
+      <fa-icon [icon]="faTimes"></fa-icon>
+    </div>
+  </div>
   <div class="check-controls-quick-remove-container">
     <div class="row no-gutters">
-      <div class="col-auto check-controls-quick-remove"
+      <div class="col-auto check-controls-quick-remove not-selectable"
         *ngFor="let selectedControl of checkBoxFormArray.getCheckedCheckBoxControls"
         (click)="onQuickRemoveControl(selectedControl)">
         {{selectedControl.checkBoxModel.description}}
@@ -19,13 +26,13 @@
 <div class="check-box-custom-dropdown"
   [ngStyle]="{'top':dropDownTop + 'px','left':dropDownLeft + 'px','width':dropDownWidth + 'px', 'max-height':dropDownMaxHeight + 'px'}"
   [ngClass]="{'check-box-flip-dropdown':flipDropDown}" (mouseenter)="preventBlurClose = true;"
-  (mouseleave)="preventBlurClose = false;" *ngIf="showDropdown">
+  (mouseleave)="preventBlurClose = false;searchInput.focus();" *ngIf="showDropdown">
   <div class="form-check cursor-pointer"
     *ngFor="let checkBoxControl of checkBoxFormArray.checkBoxControls | filterObj:['checkBoxModel','description']:search"
     (click)="checkBoxControl.setValue(!checkBoxControl.value)">
     <input class="form-check-input" type="checkbox" [formControl]="checkBoxControl"
       [value]="checkBoxControl.checkBoxModel.value">
-    <label class="form-check-label" for="flexCheckDefault">
+    <label class="form-check-label not-selectable cursor-pointer" for=" flexCheckDefault">
       {{checkBoxControl.checkBoxModel.description}}
     </label>
   </div>

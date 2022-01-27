@@ -25,3 +25,20 @@
   margin-right: 5px;
   cursor: pointer;
 }
+
+.check-controls-quick-remove:hover {
+  background-color: $theme-egg-shell;
+}
+
+.clear-search-filter {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  padding: 5px 10.1875px;
+  border-radius: 50%;
+}
+
+.clear-search-filter:hover {
+  background-color: $theme-egg-shell;
+}
