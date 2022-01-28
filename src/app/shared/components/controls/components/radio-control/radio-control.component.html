@@ -1,9 +1,9 @@
-<div class="form-group">
+<div class="form-group" [ngClass]="cssClass ? cssClass : ''">
   <label>{{label}}</label>
-  <div *ngFor="let option of options" class="form-check">
-    <input class="form-check-input" type="radio" [name]="ngControl.controlName" [value]="option.value"
-      [(ngModel)]="value">
-    <label class="form-check-label">
+  <div *ngFor="let option of options;let i = index;" class="custom-control custom-radio">
+    <input class="custom-control-input" type="radio" [id]="ngControl.controlName+i" [name]="ngControl.controlName"
+      [value]="option.value" [(ngModel)]="value">
+    <label class="custom-control-label" [for]="ngControl.controlName+i">
       {{option.description}}
     </label>
   </div>

@@ -53,6 +53,7 @@ export class CheckBoxControlComponent
   }
 
   checkBoxFormArray: CheckBoxFormArray = new CheckBoxFormArray([]);
+  checkBoxFormArrayName: string = '';
   search: string | null = null;
 
   preventBlurClose: boolean = false;
@@ -125,6 +126,7 @@ export class CheckBoxControlComponent
     }
 
     this.checkBoxFormArray = ngControl.control as CheckBoxFormArray;
+    this.checkBoxFormArrayName = ngControl.name as string;
 
     this.checkBoxFormArray.createCheckBoxControls(this.options);
 

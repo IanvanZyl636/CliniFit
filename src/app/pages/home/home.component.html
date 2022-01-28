@@ -1,12 +1,46 @@
-<form [formGroup]="form" (submit)="submit()">
-  <!-- <app-numeric-control [label]="'What is your age?'" formControlName="age"></app-numeric-control>
+<div class="container h-100">
 
-  <app-radio-control [label]="'Have you had cancer?'" [options]="hadCancerOptions" formControlName="hadCancer">
-  </app-radio-control> -->
+  <div class="d-flex flex-row align-items-center h-100">
+    <div class="flex-grow-1 flex-shrink-0 card-stepper-split-l">
+      <h1>
+        Hi there,<br />
+        We need some additional info from you
+      </h1>
+      <h2>
+        We'll use this information to match you to the best trails. So we're going to ask you a couple of questions, the
+        first is on the right already now.
+      </h2>
+    </div>
+    <div class="flex-grow-1 flex-shrink-0 card-stepper-split-r">
+      <form [formGroup]="form" (submit)="submit()">
+        <div class="card-stepper-container">
+          <app-radio-control [label]="'What is your sex?'" [cssClass]="'card-stepper-radio'" [options]="sexOptions"
+            formControlName="sex">
+          </app-radio-control>
+          <button class="card-stepper-button">Next question</button>
+          <div class="card-stepper-progress-container">
+            <div class="card-stepper-stripe active"></div>
+            <div class="card-stepper-stripe"></div>
+            <div class="card-stepper-stripe"></div>
+            <div class="card-stepper-stripe"></div>
+            <div class="card-stepper-stripe"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- <form [formGroup]="form" (submit)="submit()">
 
-  <app-check-box-control [label]="'Do you have any cronic diseases?'" [options]="hadCancerOptions"
-    formArrayName="chronic_disease">
-  </app-check-box-control>
 
-  <button type="submit">Submit</button>
-</form>
+    <app-numeric-control [label]="'What is your age?'" formControlName="age"></app-numeric-control>
+
+    <app-radio-control [label]="'What is your sex?'" [options]="sexOptions" formControlName="sex">
+    </app-radio-control>
+
+    <app-check-box-control [label]="'Do you have any cronic diseases?'" [options]="hadCancerOptions"
+      formArrayName="chronic_disease">
+    </app-check-box-control>
+
+    <button type="submit">Submit</button>
+  </form> -->
+</div>

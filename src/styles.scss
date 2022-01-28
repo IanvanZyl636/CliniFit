@@ -1,3 +1,5 @@
+$primary: #290761;
+
 @import '~bootstrap/scss/bootstrap';
 @import '_variables';
 
@@ -5,9 +7,19 @@ html,
 body {
   height: 100%;
   max-height: 100%;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: $main-theme-color;
+  font-size: 16px !important;
+  line-height: 24px !important;
 }
+
+.bg {
+  background:
+    linear-gradient(90deg, rgba($main-theme-accent4, 0.9) 8%, transparent 100%),
+    radial-gradient(50% 30% at 10% 50%, rgba($main-theme-accent3, 0.9) 20%, transparent 200%),
+    radial-gradient(50% 50% at 75% 0%, $main-theme-accent1 90%, transparent 125%),
+    radial-gradient(50% 50% at 75% 90%, $main-theme-accent2 100%, white 125%);
+}
+
+
 
 .menu-bg-color {
   background-color: $main-theme-color;

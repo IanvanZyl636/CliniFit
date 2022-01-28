@@ -27,12 +27,11 @@
   [ngStyle]="{'top':dropDownTop + 'px','left':dropDownLeft + 'px','width':dropDownWidth + 'px', 'max-height':dropDownMaxHeight + 'px'}"
   [ngClass]="{'check-box-flip-dropdown':flipDropDown}" (mouseenter)="preventBlurClose = true;"
   (mouseleave)="preventBlurClose = false;searchInput.focus();" *ngIf="showDropdown">
-  <div class="form-check cursor-pointer"
-    *ngFor="let checkBoxControl of checkBoxFormArray.checkBoxControls | filterObj:['checkBoxModel','description']:search"
-    (click)="checkBoxControl.setValue(!checkBoxControl.value)">
-    <input class="form-check-input" type="checkbox" [formControl]="checkBoxControl"
-      [value]="checkBoxControl.checkBoxModel.value">
-    <label class="form-check-label not-selectable cursor-pointer" for=" flexCheckDefault">
+  <div class="custom-control custom-checkbox cursor-pointer"
+    *ngFor="let checkBoxControl of checkBoxFormArray.checkBoxControls | filterObj:['checkBoxModel','description']:search;let i = index;">
+    <input class="custom-control-input" type="checkbox" [formControl]="checkBoxControl"
+      [value]="checkBoxControl.checkBoxModel.value" [id]="checkBoxFormArrayName+i">
+    <label class="custom-control-label not-selectable cursor-pointer" [for]="checkBoxFormArrayName+i">
       {{checkBoxControl.checkBoxModel.description}}
     </label>
   </div>

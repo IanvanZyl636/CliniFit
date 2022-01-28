@@ -1,0 +1,17 @@
+.card-stepper-radio {
+  margin: 0;
+
+  >label {
+    font: size 18px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  >.custom-control:last-child {
+    margin-bottom: 0;
+  }
+
+  >.custom-control {
+    margin-bottom: 1rem;
+  }
+}

@@ -38,6 +38,9 @@ export class RadioControlComponent
   @Input()
   twoWayBinding = true;
 
+  @Input()
+  cssClass: 'card-stepper-radio' | null = null;
+
   get value() {
     return this._value;
   }

@@ -16,14 +16,14 @@ export class HomeComponent {
 
   form = new TrailsFilterForm();
 
-  hadCancerOptions: IOptionModel[] = [
+  sexOptions: IOptionModel[] = [
     {
-      value: 'Liver Diseases',
-      description: 'Liver Diseases',
+      value: 'Male',
+      description: 'Male',
     } as IOptionModel,
     {
-      value: 'Kidney Failure',
-      description: 'Kidney Failure',
+      value: 'Female',
+      description: 'Female',
     } as IOptionModel,
   ];
 
