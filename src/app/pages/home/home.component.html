@@ -1,5 +1,4 @@
-<div class="container h-100">
-
+<div class="container h-100 mx-100">
   <div class="d-flex flex-row align-items-center h-100">
     <div class="flex-grow-1 flex-shrink-0 card-stepper-split-l">
       <h1>
@@ -29,18 +28,21 @@
       </form>
     </div>
   </div>
-  <!-- <form [formGroup]="form" (submit)="submit()">
+
+  <div class="bg-white" style="height:1000px;padding:20px;">
+    <form [formGroup]="form" (submit)="submit()">
 
 
-    <app-numeric-control [label]="'What is your age?'" formControlName="age"></app-numeric-control>
+      <app-numeric-control [label]="'What is your age?'" formControlName="age"></app-numeric-control>
 
-    <app-radio-control [label]="'What is your sex?'" [options]="sexOptions" formControlName="sex">
-    </app-radio-control>
+      <app-radio-control [label]="'Have you had cancer?'" [options]="hadCancerOptions" formControlName="hadCancer">
+      </app-radio-control>
 
-    <app-check-box-control [label]="'Do you have any cronic diseases?'" [options]="hadCancerOptions"
-      formArrayName="chronic_disease">
-    </app-check-box-control>
+      <app-check-box-control [label]="'Do you have any cronic diseases?'" [options]="sOptions"
+        formArrayName="chronic_disease">
+      </app-check-box-control>
 
-    <button type="submit">Submit</button>
-  </form> -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 </div>

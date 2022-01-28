@@ -27,6 +27,32 @@ export class HomeComponent {
     } as IOptionModel,
   ];
 
+  hadCancerOptions: IOptionModel[] = [
+    {
+      value: true,
+      description: 'Yes',
+    } as IOptionModel,
+    {
+      value: false,
+      description: 'No',
+    } as IOptionModel,
+  ];
+
+  sOptions: IOptionModel[] = [
+    {
+      value: 'Liver Cancer',
+      description: 'Liver Cancer',
+    } as IOptionModel,
+    {
+      value: 'Kidney Failure',
+      description: 'Kidney Failure',
+    } as IOptionModel,
+    {
+      value: 'Heart Failure',
+      description: 'Heart Failure',
+    } as IOptionModel,
+  ];
+
   isLoading = false;
 
   constructor(private excelService: ExcelService) {
